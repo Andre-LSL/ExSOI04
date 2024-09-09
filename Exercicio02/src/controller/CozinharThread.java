@@ -26,6 +26,7 @@ public class CozinharThread extends Thread {
 
     private void entregar(Semaphore semaforo, int ID, String Nome) {
         try {
+            System.err.println("Preparando para entrega. " + ID);
             semaforo.acquire();
             sleep(5000);
             System.err.println("Prato Entregue! " + Nome +
